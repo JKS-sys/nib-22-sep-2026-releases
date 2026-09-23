@@ -1,6 +1,7 @@
 # Nib release notes
 
 ## 0.4.2
+- ipconfig.co.network/nib is the site's own page again (with the site navigation); the Worker's plain copy moved to /nib/download, and /nib/download.json lists the current installers for the site to read
 - Pro is now a real Razorpay subscription: ₹20 a month or ₹220 a year, renewing automatically, cancel any time
 - Nib renews your licence quietly in the background while the subscription runs — you only activate once
 - Opens practically every programming, config and data file, with SQLite databases in a read-only table viewer
