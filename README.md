@@ -2,7 +2,7 @@
 
 # Nib
 
-A fast code editor built with Tauri and Rust — small (a few MB per platform), quick to open, and it brings back unsaved work after a restart.
+A fast code & text editor built with Tauri and Rust — small (a few MB per platform), quick to open, and it brings back unsaved work after a restart.
 
 **Download 0.4.3:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest) · [ipconfig.co.network/nib](https://ipconfig.co.network/nib)
 
