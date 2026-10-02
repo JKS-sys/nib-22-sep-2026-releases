@@ -1,7 +1,20 @@
 # Nib release notes
 
-## 0.4.3 — 2026-09-23
-- Nib 0.4.3
+## 0.4.4 — 02-oct-2026
+- Fixed: a file reopened after ⌘Q was shown as altered even when it matched the file on disk. Nib now compares your text with the file itself, so undoing back to the saved text clears the dot too
+- Nib notices files changed by other apps (git, formatters, other editors): untouched tabs reload, tabs with your edits show a bar to compare, reload or keep yours — and a file that changed while Nib was closed is reported instead of silently overwritten
+- Change gutter marks added, changed and removed lines; F7 / ⇧F7 jump between changes; Compare with Saved (⌥⌘D) shows the difference
+- Saving keeps Windows (CRLF) line endings, UTF-8 byte-order marks and file permissions
+- Split panes like Keel: Split Right (⌘\), Split Down (⇧⌘\), drag a tab onto any side of the editor, resize, maximise (⇧⌘↩), close a pane and the file stays as a tab
+- Named windows (Window → Name Window…), Switch Window, Move Tab to New Window (or drag it out), Merge All Windows
+- Five colour variants — Gold, Ocean, Ember, Violet, Calm — in light and dark, plus a colour for each tab; no pink anywhere
+- AI (Pro): suggestions as you type (Tab accepts), plus Explain, Fix, Generate and Ask about your code
+- 13 offline AI models to download, run and remove on your computer — Qwen2.5 Coder, DeepSeek Coder, StarCoder2, CodeGemma, Llama 3.2, Phi-3.5, Gemma 2 — with fill-in-the-middle completion for the most accurate suggestions
+- GitHub Copilot: sign in with GitHub and use your Copilot plan; or add any AI service by URL
+- Word completion from every open file, free and offline
+- Animations and sound effects (Settings → Animations, Sounds)
+- One About section with the app, these notes and the creator
+- macOS: if Nib won't open after installing, run `xattr -cr /Applications/Nib.app`
 
 ## 0.4.2
 - ipconfig.co.network/nib is the site's own page again (with the site navigation); the Worker's plain copy moved to /nib/download, and /nib/download.json lists the current installers for the site to read
