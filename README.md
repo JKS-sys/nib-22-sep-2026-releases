@@ -42,22 +42,22 @@ curl -fsSL https://raw.githubusercontent.com/JKS-sys/nib-22-sep-2026-releases/ma
 
 Update later with `brew upgrade nib` (Nib also updates itself).
 
-**Download 0.4.7:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest)
+**Download 0.4.8:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest)
 
 | Platform | File |
 |---|---|
-| macOS Apple Silicon | `Nib_0.4.7_aarch64.dmg` |
-| macOS Intel | `Nib_0.4.7_x64.dmg` |
-| Windows | `Nib_0.4.7_x64-setup.exe` |
-| Linux | `Nib_0.4.7_amd64.AppImage` / `.deb` |
+| macOS Apple Silicon | `Nib_0.4.8_aarch64.dmg` |
+| macOS Intel | `Nib_0.4.8_x64.dmg` |
+| Windows | `Nib_0.4.8_x64-setup.exe` |
+| Linux | `Nib_0.4.8_amd64.AppImage` / `.deb` |
 
 - **macOS:** open the .dmg and drag Nib to Applications. If it says Nib is damaged, run `xattr -cr /Applications/Nib.app`.
 - **Windows:** run the setup .exe.
 - **Linux.** Install the `.deb` with your package manager, or make the AppImage executable and run it:
   ```sh
-  sudo apt install ./Nib_0.4.7_amd64.deb
+  sudo apt install ./Nib_0.4.8_amd64.deb
   # or
-  chmod +x Nib_0.4.7_amd64.AppImage && ./Nib_0.4.7_amd64.AppImage
+  chmod +x Nib_0.4.8_amd64.AppImage && ./Nib_0.4.8_amd64.AppImage
   ```
 
 ## Screenshots
@@ -90,9 +90,10 @@ Update later with `brew upgrade nib` (Nib also updates itself).
 - **Spreadsheet charts and highlighting saved** — as real Excel charts and conditional formatting that Excel, Numbers and LibreOffice show
 - **Password-protected Office files** — Excel, Word and PowerPoint files open with their password and save still protected (the same encryption Office uses)
 - **Archives** — opening a zip extracts it beside itself (into its one folder, or a folder named after it) and the window closes; password-protected zips open; .rar, .7z and .tar files extract through the computer's own tools. **Compress…** makes a zip at the strongest setting (files that would not shrink are stored as they are), or tar.xz / tar.zst / 7z / RAR when those tools are present — always lossless, with the saving shown
-- **Pictures** — zoom, pan, rotate, flip, step through the folder with ← →, an info panel, checkerboard for transparency
+- **Pictures** — HEIC, TIFF and other formats the web view can't decode are converted for display; zoom, pan, rotate, flip, step through the folder with ← →, an info panel, checkerboard for transparency
 - **Books** — EPUBs open with their table of contents, text size and font choice, a reading-position memory and plain-text export
-- **PDFs** — shown with the system's renderer; page tools: merge, extract, split, rotate, reorder, delete, page numbers, shrink, copy the text
+- **PDFs** — drawn by Nib itself on every system, with thumbnails, find, zoom and selectable text; page tools: merge, extract, split, rotate, reorder, delete, page numbers, shrink, copy the text
+- **Printing** (⌘P) — every kind of tab, with a live preview on paper: paper, orientation, margins, colour or black & white, a header on every page; code keeps its syntax colours and line numbers; sheets, slides (handouts, notes), PDF page ranges, pictures and books
 - **Search the web** — DuckDuckGo, Bing, Google, Mojeek, Yahoo and Wikipedia asked at once; blocked engines are skipped and the rest merged, with sources in the AI chat
 - **300 spreadsheet functions** — including money (PMT, FV, PV, NPER, RATE, NPV, IRR, depreciation), statistics (percentiles, correlation, regression, normal distribution), engineering (CONVERT, BIN/HEX/OCT, bit operations), dates (NETWORKDAYS, WORKDAY, YEARFRAC) and database functions (DSUM…), checked against LibreOffice Calc
 - **Crash reports** — if Nib ever closes unexpectedly, it offers to send an anonymous report next time (version, system, the error and where — never your files); the owner reads them in the Owner Panel, in full, and exports them as .txt or .md
@@ -104,12 +105,12 @@ Update later with `brew upgrade nib` (Nib also updates itself).
 - **Always knows what is unsaved** — compared with the file on disk, not guessed: a change gutter, Compare with Saved, and a warning when another app changes the file
 - **Never loses your work** — ⌘Q keeps unsaved and untitled files, spreadsheets, documents and decks too; they come back on the next launch
 - **Split panes**, **named windows**, **Markdown preview**, **five colour variants** with a colour for each tab, **four sound packs**, file-type badges and animations throughout
-- **80+ languages**, SQLite databases in a read-only viewer, side-bar file actions, Goto Anything, multi-cursor, find in folder, bookmarks, minimap, JSON / Base64 / URL tools
+- **80+ languages**, SQLite databases in a read-only viewer, side-bar file actions, Goto Anything (⌘T), multi-cursor, find in folder, bookmarks, minimap, JSON / Base64 / URL tools
 
 **Free:** everything above except the items marked Pro, Find in Folder, Goto Symbol, multi-cursor tools, bookmarks, text tools, minimap, auto save and distraction-free mode.
 **Pro (₹20/month or ₹220/year):** AI, plus all of those.
 
-## What's new in 0.4.7
+## What's new in 0.4.8
 
 - Fixed: a file reopened after ⌘Q was shown as altered even when it matched the file on disk. Nib now compares your text with the file itself, so undoing back to the saved text clears the dot too
 - Nib notices files changed by other apps (git, formatters, other editors): untouched tabs reload, tabs with your edits show a bar to compare, reload or keep yours — and a file that changed while Nib was closed is reported instead of silently overwritten
@@ -156,6 +157,14 @@ Update later with `brew upgrade nib` (Nib also updates itself).
 - Rainbow indent guides (seven hues, the cursor's block glows), a syntax-coloured formula bar in spreadsheets, coloured code in AI chat replies
 - New sounds (issue, pause, resume, export) and motion: tab switches settle in, guides ignite, the Owner Panel's ribbon, lifted stat cards and glowing payment links
 - Smaller: the PDF tools carry one font's metrics instead of fourteen (55 KB less, compressed)
+- Fixed: pictures said "This picture type can't be shown here", EPUB pictures were missing and PDFs stayed blank — the app's security policy blocked the in-memory pictures every viewer uses. The tests now run under the very same policy, so this cannot come back unnoticed
+- PDFs are drawn by Nib itself (pdf.js), the same on Mac, Windows and Linux: thumbnails, page number box, zoom (⌘ + scroll), fit width / whole page, turn the view, find in the PDF with every hit highlighted, selectable text
+- Pictures the web view can't decode (HEIC, TIFF, AVIF on older systems…) are converted by the system for display (sips on macOS, WIC on Windows, ImageMagick/libheif on Linux); the file itself is untouched
+- EPUB covers show again (most are pictures wrapped in SVG, which were dropped); centred and italic text keep their layout
+- Print… (⌘P) for every kind of tab, with a live preview on paper: paper size, orientation, margins, colour or black & white, the name and date on every page; code with line numbers, wrapping and its syntax colours and rainbow brackets; spreadsheets (this sheet, every sheet or the selection, gridlines, A B C / 1 2 3); documents; slides one per page, 2/4/6 per page or with speaker notes; PDF page ranges; pictures fitted or actual size; a book chapter or the whole book. Goto Anything moved to ⌘T
+- Fixed: after every update macOS asked "Nib would like to access files in your Downloads folder". Nib no longer reads Downloads at start-up (old installers there are tidied only after an update, and only if you turn it on in Settings), and Mac builds are now signed with the same certificate every time, so macOS keeps your answers across updates
+- Start-up animation: the nib draws itself in ink, sparks fly, "Nib" rises in colour, the tagline types itself, "By Jagadeesh Kumar S" shines — with a start-up chord, a sparkle and typing ticks. Any key skips it; Settings → Start-up animation turns it off
+- More colour: file names take their kind's colour, Markdown preview headings by level with coloured lists, quotes, tables and code, spreadsheet numbers and active headers, menus that glow item by item, coloured settings headings and shortcuts
 - Every local AI: Nib finds Ollama, LM Studio, Jan, GPT4All, LocalAI, llama.cpp, KoboldCpp, text-generation-webui, vLLM, LiteLLM, Msty and Llamafile and uses their models in one click; pulls Ollama models; adds any GGUF from Hugging Face
 - Install in one command: `curl -fsSL https://raw.githubusercontent.com/JKS-sys/nib-22-sep-2026-releases/main/install.sh | sh` (PowerShell: `irm …/install.ps1 | iex`)
 - Windows voice typing works offline with Windows' own speech engine; printing uses the system print dialog on every OS

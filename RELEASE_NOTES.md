@@ -1,6 +1,6 @@
 # Nib release notes
 
-## 0.4.7 — 02-oct-2026
+## 0.4.8 — 02-oct-2026
 - Fixed: a file reopened after ⌘Q was shown as altered even when it matched the file on disk. Nib now compares your text with the file itself, so undoing back to the saved text clears the dot too
 - Nib notices files changed by other apps (git, formatters, other editors): untouched tabs reload, tabs with your edits show a bar to compare, reload or keep yours — and a file that changed while Nib was closed is reported instead of silently overwritten
 - Change gutter marks added, changed and removed lines; F7 / ⇧F7 jump between changes; Compare with Saved (⌥⌘D) shows the difference
@@ -46,6 +46,14 @@
 - Rainbow indent guides (seven hues, the cursor's block glows), a syntax-coloured formula bar in spreadsheets, coloured code in AI chat replies
 - New sounds (issue, pause, resume, export) and motion: tab switches settle in, guides ignite, the Owner Panel's ribbon, lifted stat cards and glowing payment links
 - Smaller: the PDF tools carry one font's metrics instead of fourteen (55 KB less, compressed)
+- Fixed: pictures said "This picture type can't be shown here", EPUB pictures were missing and PDFs stayed blank — the app's security policy blocked the in-memory pictures every viewer uses. The tests now run under the very same policy, so this cannot come back unnoticed
+- PDFs are drawn by Nib itself (pdf.js), the same on Mac, Windows and Linux: thumbnails, page number box, zoom (⌘ + scroll), fit width / whole page, turn the view, find in the PDF with every hit highlighted, selectable text
+- Pictures the web view can't decode (HEIC, TIFF, AVIF on older systems…) are converted by the system for display (sips on macOS, WIC on Windows, ImageMagick/libheif on Linux); the file itself is untouched
+- EPUB covers show again (most are pictures wrapped in SVG, which were dropped); centred and italic text keep their layout
+- Print… (⌘P) for every kind of tab, with a live preview on paper: paper size, orientation, margins, colour or black & white, the name and date on every page; code with line numbers, wrapping and its syntax colours and rainbow brackets; spreadsheets (this sheet, every sheet or the selection, gridlines, A B C / 1 2 3); documents; slides one per page, 2/4/6 per page or with speaker notes; PDF page ranges; pictures fitted or actual size; a book chapter or the whole book. Goto Anything moved to ⌘T
+- Fixed: after every update macOS asked "Nib would like to access files in your Downloads folder". Nib no longer reads Downloads at start-up (old installers there are tidied only after an update, and only if you turn it on in Settings), and Mac builds are now signed with the same certificate every time, so macOS keeps your answers across updates
+- Start-up animation: the nib draws itself in ink, sparks fly, "Nib" rises in colour, the tagline types itself, "By Jagadeesh Kumar S" shines — with a start-up chord, a sparkle and typing ticks. Any key skips it; Settings → Start-up animation turns it off
+- More colour: file names take their kind's colour, Markdown preview headings by level with coloured lists, quotes, tables and code, spreadsheet numbers and active headers, menus that glow item by item, coloured settings headings and shortcuts
 - Every local AI: Nib finds Ollama, LM Studio, Jan, GPT4All, LocalAI, llama.cpp, KoboldCpp, text-generation-webui, vLLM, LiteLLM, Msty and Llamafile and uses their models in one click; pulls Ollama models; adds any GGUF from Hugging Face
 - Install in one command: `curl -fsSL https://raw.githubusercontent.com/JKS-sys/nib-22-sep-2026-releases/main/install.sh | sh` (PowerShell: `irm …/install.ps1 | iex`)
 - Windows voice typing works offline with Windows' own speech engine; printing uses the system print dialog on every OS

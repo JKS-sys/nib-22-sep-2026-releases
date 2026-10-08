@@ -1,9 +1,9 @@
 cask "nib" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.4.7"
-  sha256 arm:   "13fd523716e9b928509d47d2e27c9e97ee36cece1b8e086d2ab37139dbf159b0",
-         intel: "fc45c31060571673f6b918666b7463900dfb220abfa9d8cb662a6075963fd08c"
+  version "0.4.8"
+  sha256 arm:   "d84944e2cb75cbe4d3b5bca890368a22f856daa55ac241ff524c35d1b956b305",
+         intel: "45f5de7f4836ee1b381af9cee15832d0e57ede3ba72ba20066bcea8735c577ca"
 
   url "https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/download/v#{version}/Nib_#{version}_#{arch}.dmg",
       verified: "github.com/JKS-sys/nib-22-sep-2026-releases/"
