@@ -1,6 +1,6 @@
 # Nib release notes
 
-## 0.4.6 — 02-oct-2026
+## 0.4.7 — 02-oct-2026
 - Fixed: a file reopened after ⌘Q was shown as altered even when it matched the file on disk. Nib now compares your text with the file itself, so undoing back to the saved text clears the dot too
 - Nib notices files changed by other apps (git, formatters, other editors): untouched tabs reload, tabs with your edits show a bar to compare, reload or keep yours — and a file that changed while Nib was closed is reported instead of silently overwritten
 - Change gutter marks added, changed and removed lines; F7 / ⇧F7 jump between changes; Compare with Saved (⌥⌘D) shows the difference
@@ -17,17 +17,35 @@
 - Spreadsheets: CSV, TSV, Excel (.xlsx .xlsm .xls), OpenDocument (.ods) and Apple Numbers files open as a grid — 90+ Excel formulas, several sheets, sort, filter, fill, find & replace, number formats, copy/paste with Excel, and AI to change the data, write a formula or answer questions
 - Password-protected Excel workbooks open with their password and save still protected
 - AI proofreading: correct a word, sentence, paragraph, selection or the whole file — right-click, or ⌥⌘K — with every change shown first
-- Owner licence console: generate monthly, yearly and lifetime codes (never a duplicate), see where and on what each was activated, and revoke, restore, extend or delete them
+- Owner Panel: generate monthly, yearly and lifetime codes (never a duplicate), see where and on what each was activated, and revoke, restore, extend or delete them
 - Markdown preview beside the file; side-bar file actions (new, rename, duplicate, move to Trash); JSON, Base64 and URL tools; word count
 - Fixed: the window could not be dragged by its title bar
 - Fixed: double-clicking a tab kept adding split panes, some of them off-screen; tabs now leave the window only when dragged out sideways or below
 - Fixed: an AI model deleted in Keel still showed as installed in Nib (they share one copy — Nib now asks whether to remove it from both)
 - "Make Nib the default editor" is now quick, with progress, and no longer freezes the window
 - Smaller app: Nib updates itself without the bulky updater plugin
+- Archives: open a zip to extract it (into its one folder, or a folder named after it; the window then closes); password-protected zips; .rar/.7z/.tar through the computer's tools; Compress… makes a zip at the strongest setting, or tar.xz/tar.zst/7z/RAR when present, and shows the saving
+- Pictures, EPUB books and PDFs open in Nib — PDFs with merge, extract, split, rotate, reorder, delete, page numbers and shrink
+- 120 more spreadsheet functions (money, statistics, engineering, dates, database), each checked against LibreOffice Calc
+- Tabs merge: drop a tab onto another Nib window to move it there; "Merge All Windows into This One" in the tab menu
+- Crash reports: Nib offers to send an anonymous report after an unexpected close; the Owner Panel lists them
+- The Owner Panel is keyed to the owner's Mac serial — no admin token anywhere any more
+- Homebrew without a tap: the cask ships in the releases repo (curl it, then brew install --cask); the homebrew-tap repository is retired
+- The line under the tabs now runs the whole width of the window, glowing under the open tab; richer syntax colours (variables, definitions, tags, attributes, headings by level), seven bracket colours, coloured status bar
+- Release notes are published to R2 with each release; older installers are removed after a successful release
+- Fixed: a formula argument that was itself a comma or semicolon (for example TEXTJOIN(",", …)) was read as a separator
 - Word: comments in the margin, footnotes and endnotes, Track Changes (records your edits; accept or reject one or all), an editable header and footer with page numbers, and an outline of the headings
 - PowerPoint: speaker notes, charts drawn from their data (double-click to edit the numbers), tables you edit in place, and SmartArt — all kept when saving
 - Old and Apple formats: .doc, .ppt, .rtf, .odt, .odp, Pages and Keynote open and save back (with macOS's converter, LibreOffice, or Pages/Keynote); without one, the text of .doc and .ppt still opens
 - Spreadsheet charts and highlighting are saved as real Excel charts and conditional formatting
+- Owner Panel (was "owner console") in its own window — Nib → Owner Panel… (⌥⇧⌘O) — opened by the owner's Mac serial alone
+- Subscriptions in detail, with everything: create one for a customer (Razorpay emails the payment link), pause and resume, move between monthly and yearly now or at the period end, edit the customer, keep a note, issue the licence code once paid (or deliberately before), cancel at the period end or now, delete; search, filter and CSV export
+- Crash reports in the Owner Panel: each readable in full, deletable one by one or all at once, exportable as .txt or .md — and this computer's own reports (sent or not) listed, readable, exportable and deletable
+- Fixed: after "Make Nib the default", files double-clicked in the Finder or Explorer did not open — start-up stopped on an old font setting, so the files waited for ever; start-up can no longer be stopped by a setting, and Nib now declares every type it opens (documents, slides, pictures, PDFs, books and archives, not only text and spreadsheets); on Linux the launcher passes the file
+- Release notes are attached to each GitHub release and uploaded to R2; older releases, stray assets and old R2 files are removed once the new release is confirmed
+- Rainbow indent guides (seven hues, the cursor's block glows), a syntax-coloured formula bar in spreadsheets, coloured code in AI chat replies
+- New sounds (issue, pause, resume, export) and motion: tab switches settle in, guides ignite, the Owner Panel's ribbon, lifted stat cards and glowing payment links
+- Smaller: the PDF tools carry one font's metrics instead of fourteen (55 KB less, compressed)
 - Every local AI: Nib finds Ollama, LM Studio, Jan, GPT4All, LocalAI, llama.cpp, KoboldCpp, text-generation-webui, vLLM, LiteLLM, Msty and Llamafile and uses their models in one click; pulls Ollama models; adds any GGUF from Hugging Face
 - Install in one command: `curl -fsSL https://raw.githubusercontent.com/JKS-sys/nib-22-sep-2026-releases/main/install.sh | sh` (PowerShell: `irm …/install.ps1 | iex`)
 - Windows voice typing works offline with Windows' own speech engine; printing uses the system print dialog on every OS
