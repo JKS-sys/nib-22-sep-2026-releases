@@ -1,6 +1,20 @@
 # Nib release notes
 
-## 0.4.9 — 02-oct-2026
+## 0.4.10 — 09-oct-2026
+- Fixed: PDFs did not scroll at all — the viewer grew to the full height of every page and the window clipped it, so the mouse wheel had nothing to scroll. The viewer now fits its tab; a test wheels a real mouse over every viewer so this cannot come back unnoticed
+- Fixed: rainbow brackets showed in one grey — the syntax colours were drawn over them. Brackets now take a different colour at each of seven depths, and the pair around the cursor glows in its colour
+- Mouse page-turning everywhere: PDFs (whole-page view turns one page per wheel notch or swipe), books (scroll on past the end of a chapter — a gauge fills — to turn to the next; past the top for the previous, which opens at its end), pictures (the wheel steps through the folder; ⌘/Ctrl + wheel or a pinch zooms; a zoomed picture pans), slides and the presenter (the wheel moves between slides). The mouse's Back / Forward buttons turn pages in all of them; trackpad momentum turns one page, not twenty
+- PDFs: Space / ⇧Space turn pages, middle-button or ⌥-drag moves the pages, two pages side by side, night reading, full screen (F), and each PDF reopens at the page you left
+- Books: page colours (theme, paper, sepia, night), three line spacings, minutes left in the chapter and the book, the place in a chapter remembered, text size changes keep your place, Page Down / Space turn the chapter at its end, a coloured drop capital
+- Pictures: slideshow through the folder (S), fill the window (F), full screen (⏎), a colour picker that copies the hex code of any pixel (P), arrows at the sides on hover, pictures slide in
+- Many more colours, never pink: control keywords, import/export and declarations each in their own colour; method calls, classes, parameters, template strings and escapes; arithmetic, logic, comparison and assignment operators; commas and dots; doc comments; six heading levels. TODO, FIXME, NOTE, HACK, BUG and PERF in comments become coloured tags; colours in code get a swatch (click it to pick another colour); the word under the cursor is underlined wherever it appears; every tenth line number is tinted; autocomplete shows each kind of suggestion in its colour
+- Every window speaks the same colours: sixteen file kinds each with their own hue in the side bar, tabs and recent files; folders take their level's colour with rainbow guides down the tree; book and Markdown headings by level; database columns and values (numbers, dates, booleans, JSON, links, text); viewer toolbars, the palette, Settings and the status bar
+- Graphics: code glyphs drift behind the welcome screen and lean away from the pointer; a ring of ink bursts from the tab when you save; a glowing cursor (Settings); sparks as you type (Settings → Off / Subtle / Lively); a nib that writes while PDFs load; tabs lift and wear a cap in their colour; gradient dialog headings; find boxes glow through the hues
+- Sounds: six new packs (Kalimba, Chime, Synth, Bubble, Piano, Wood block — thirteen in all) and new sounds for page and chapter turns (a paper rustle), zoom, the palette, find, Settings, new files, folders opening and closing, the side bar, bookmarks, printing, slideshows and the colour picker
+- Background sounds, synthesised so nothing is downloaded: rain, ocean waves, brown noise, wind, fireplace and night (Settings → Background sound, with its own volume)
+- New text tools in the palette: camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, URL slug, sort by length, shuffle, number lines, remove empty lines, escape / unescape HTML, sum the numbers in the selection, copy SHA-256; plus Next Colour Variant, Sparks and Background Sound commands
+
+## 0.5.0 — 02-oct-2026
 - Fixed: a file reopened after ⌘Q was shown as altered even when it matched the file on disk. Nib now compares your text with the file itself, so undoing back to the saved text clears the dot too
 - Nib notices files changed by other apps (git, formatters, other editors): untouched tabs reload, tabs with your edits show a bar to compare, reload or keep yours — and a file that changed while Nib was closed is reported instead of silently overwritten
 - Change gutter marks added, changed and removed lines; F7 / ⇧F7 jump between changes; Compare with Saved (⌥⌘D) shows the difference
