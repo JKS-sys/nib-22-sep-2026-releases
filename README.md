@@ -42,37 +42,101 @@ curl -fsSL https://raw.githubusercontent.com/JKS-sys/nib-22-sep-2026-releases/ma
 
 Update later with `brew upgrade nib` (Nib also updates itself).
 
-**Download 0.4.11:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest)
+**Download 0.4.12:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest)
 
 | Platform | File |
 |---|---|
-| macOS Apple Silicon | `Nib_0.4.11_aarch64.dmg` |
-| macOS Intel | `Nib_0.4.11_x64.dmg` |
-| Windows | `Nib_0.4.11_x64-setup.exe` |
-| Linux | `Nib_0.4.11_amd64.AppImage` / `.deb` |
+| macOS Apple Silicon | `Nib_0.4.12_aarch64.dmg` |
+| macOS Intel | `Nib_0.4.12_x64.dmg` |
+| Windows | `Nib_0.4.12_x64-setup.exe` |
+| Linux | `Nib_0.4.12_amd64.AppImage` / `.deb` |
 
 - **macOS:** open the .dmg and drag Nib to Applications. If it says Nib is damaged, run `xattr -cr /Applications/Nib.app`.
 - **Windows:** run the setup .exe.
 - **Linux.** Install the `.deb` with your package manager, or make the AppImage executable and run it:
   ```sh
-  sudo apt install ./Nib_0.4.11_amd64.deb
+  sudo apt install ./Nib_0.4.12_amd64.deb
   # or
-  chmod +x Nib_0.4.11_amd64.AppImage && ./Nib_0.4.11_amd64.AppImage
+  chmod +x Nib_0.4.12_amd64.AppImage && ./Nib_0.4.12_amd64.AppImage
   ```
+
+## See it in action
+
+Each clip is recorded from the real app. Click one for the full-quality video.
+
+<p align="center"><a href="assets/demos/startup.mp4"><img src="assets/demos/startup.gif" width="800" alt="Nib starting up"></a></p>
+
+**Start-up.** The nib draws itself in ink, the name rises letter by letter and “By Jagadeesh Kumar S” shines in — then Nib is ready, straight to your work.
+
+<p align="center"><a href="assets/demos/code.mp4"><img src="assets/demos/code.gif" width="800" alt="Writing code in Nib"></a></p>
+
+**Code in colour.** Rainbow brackets by depth, a colour for every kind of word, and long lines that wrap under their own indent instead of scrolling sideways. The Aa button in the status bar changes the font, size, weight, italic and spacing; right-click gives Transform, Lines, Find, Font and more in neat submenus.
+
+<p align="center"><a href="assets/demos/spreadsheet.mp4"><img src="assets/demos/spreadsheet.gif" width="800" alt="Resizing spreadsheet columns and rows"></a></p>
+
+**Spreadsheets like Excel.** Drag a column or row edge to resize it (a guide and the size follow the pointer), double-click an edge to fit, right-click a header for width, insert, sort and format. Any font and any size for cells, choice lists with coloured chips, and 448 functions — VSTACK, XMATCH, T.TEST, complex numbers and more.
+
+<p align="center"><a href="assets/demos/reading.mp4"><img src="assets/demos/reading.gif" width="800" alt="Two-page PDF reading"></a></p>
+
+**PDFs as two pages.** PDFs open side by side like a printed book; the wheel and the arrow keys turn two pages at a time, and right-click brings every toolbar tool as a menu.
+
+<p align="center"><a href="assets/demos/book.mp4"><img src="assets/demos/book.gif" width="800" alt="Reading an EPUB book"></a></p>
+
+**Books like a real book.** EPUBs open as two pages, keep your place, and take any font installed on your computer.
+
+<p align="center"><a href="assets/demos/small-window.mp4"><img src="assets/demos/small-window.gif" width="800" alt="Nib in a small window"></a></p>
+
+**Any window size.** Shrink the window and nothing overlaps or scrolls: tools that do not fit wait behind ⋯, the side bar floats, and everything comes back as the window grows.
+
+<p align="center"><a href="assets/demos/animations.mp4"><img src="assets/demos/animations.gif" width="800" alt="Nib's vector animations"></a></p>
+
+**A picture and a sound for every action.** Saving, compressing, extracting, AI at work, two-page view, fonts, charts and more each draw a small vector animation with its own sound (Settings → Animations and Sounds).
 
 ## Screenshots
 
+<p align="center"><img src="assets/screenshots/code.webp" width="820" alt="The code editor"></p>
+
+**The editor.** Rainbow brackets, coloured comment tags, wrapped long lines and a status bar where every item has its own colour.
+
+<p align="center"><img src="assets/screenshots/spreadsheet.webp" width="820" alt="A spreadsheet"></p>
+
+**A spreadsheet.** Excel colours kept, coloured column letters and row numbers, any font and size, and toolbars grouped by colour.
+
+<p align="center"><img src="assets/screenshots/pdf-two-pages.webp" width="820" alt="A PDF in two-page view"></p>
+
+**Two pages side by side** — the default for PDFs and books (Settings → Two pages).
+
+<p align="center"><img src="assets/screenshots/book-two-pages.webp" width="820" alt="An EPUB book"></p>
+
+**Books** with reading time, contents, bookmarks, highlights, read-aloud and any font.
+
+<p align="center"><img src="assets/screenshots/menus.webp" width="820" alt="Right-click menu with submenus"></p>
+
+**Right-click everywhere** — submenus, shortcuts, and the keyboard (↑ ↓ → ← Esc) all work.
+
+<p align="center"><img src="assets/screenshots/fonts.webp" width="820" alt="Font settings"></p>
+
+**Fonts with no limits** — text and code fonts, any size from 6 to 400 px, weight, italic, line and letter spacing, and the interface font.
+
+<p align="center"><img src="assets/screenshots/small-window.webp" width="820" alt="Nib in a small window"></p>
+
+**Small windows** — toolbars fold into ⋯ and unfold over the page.
+
+<p align="center"><img src="assets/screenshots/light.webp" width="820" alt="Light appearance"></p>
+
+**Light appearance** — the same colours, readable on paper-white.
+
 <p align="center"><img src="assets/screenshots/start.webp" width="820" alt="Nib's start screen"></p>
 
-**The start screen.** Nib opens straight to work: New File (⌘N), Open File (⌘O), Open Folder (⇧⌘O) and Open Recent (⌥⌘O), each with its shortcut. Your Pro plan shows at the top right, and with nothing open Nib is ready to type at once.
+**The start screen.** New File, Open File, Open Folder and Open Recent, plus a new document, spreadsheet or presentation in one click.
 
 <p align="center"><img src="assets/screenshots/about.webp" width="820" alt="About Nib"></p>
 
-**About Nib.** The version you are running, what Nib is — a fast code editor with a native Rust core and CodeMirror 6 that opens instantly and remembers where you left off — and where its updates come from.
+**About Nib.** The version you are running and where its updates come from.
 
 <p align="center"><img src="assets/screenshots/creator.webp" width="820" alt="About the creator"></p>
 
-**About the creator.** Who makes Nib — Jagadeesh Kumar S, a creator in Velachery, Chennai — with his YouTube channel NewsCraft Studio, his website, and how to get in touch.
+**About the creator.** Jagadeesh Kumar S, a creator in Velachery, Chennai — with his YouTube channel NewsCraft Studio and how to get in touch.
 
 ## Features
 
@@ -115,23 +179,22 @@ Update later with `brew upgrade nib` (Nib also updates itself).
 **Free:** everything above except the items marked Pro, Find in Folder, Goto Symbol, multi-cursor tools, bookmarks, text tools, minimap, auto save and distraction-free mode.
 **Pro (₹20/month or ₹220/year):** AI, plus all of those.
 
-## What's new in 0.4.11
+## What's new in 0.4.12
 
-- Fixed: filling down from Aug-26 gave Aug-26 again (or a plain number) instead of Sep-26. Smart fill now continues months (as dates or as text, across the year, month ends kept), days, weeks, weekdays, quarters (Q4 → Q1 2027), ISO and 1-Aug-2026 dates and times; typing Aug-26 in a workbook makes a real month, as Excel does. Formats and colours go along with the filled values
-- Fixed: colouring made in Microsoft Excel did not show, and colouring done in Nib was not saved. Nib now reads and writes cell fill and text colours (including theme colours with tints), bold, italic, underline, strikethrough, text size, alignment, wrapped text, borders and row heights — and Excel's conditional formatting (greater/less/equal/contains, colour scales, data bars) shows in Nib
-- Spreadsheet formatting bar: B I U S, bigger/smaller text, text colour, fill colour, 17 quick colours (⇧-click for text), align left/centre/right, Wrap text (the row grows to fit), borders, format painter, more/fewer decimals, clear formatting, Table colours (header and banded rows), Colour scale and Data bars; ⌘B ⌘I ⌘U on cells; column letters each in their own colour
-- Fixed: "Correct Paragraph" (or the selection) after selecting all lines put every line into one. Corrected text keeps each line break and its indentation, even when the AI joins them
-- Writing suggestions as you type, offline: common misspellings (teh → the, recieve → receive …), a word written twice, a/an, a lone "i", a sentence starting with a small letter, a space before punctuation, no space after a comma, doubled punctuation, extra spaces, invisible characters, very long sentences and paragraphs — underlined in four colours with one-click fixes, "Fix All" in the status bar; in code only comments are checked. Documents get ✎ Check with a list of suggestions and Fix all
-- Text wraps everywhere by default — the editor, Markdown preview, compare, database cells, AI replies — with a Wrap switch in the status bar (⌥Z)
-- Fixed: compressing a file of 4 GB or more failed. Zip now writes ZIP64 for big files (tested with a real 4.4 GB file, opened by Python and unzip), and shows progress in bytes while it works
-- Split archives open from any piece: x.zip.001 / .002 …, x.zip.part0 / .part1 … and spanned x.z01 … x.zip, read in place without joining them first; 7z and RAR pieces go to the computer's own tools. Compress → "Zip in parts…" cuts a zip into 25 MB, 100 MB, 700 MB, 1 GB, 4 GB (FAT32) or any size of pieces
-- Archives, as in WinRAR: Extract To… a folder you choose, Info (format, ZIP64, files, folders, exact sizes, saving, pieces, comment), Report (.md listing of every file), Benchmark (compress and extract speed), exact byte sizes, a pieces badge
-- Books: two pages side by side, like an open book (the wheel, arrows, Space and the mouse buttons turn them; the last spread turns the chapter), full screen, bookmarks and coloured highlights (listed in Contents, click a highlight to remove it), read aloud with the system's voices
-- PDFs: bookmark pages (listed in Contents), read aloud from the current page, Snapshot (copy a page as a picture)
-- Documents: read aloud from the cursor, Focus mode, ✎ Check writing
-- Icons on every toolbar — one line drawing per command (B/I/U, highlighter, alignment, lists, table, picture, link, comment, track changes, thumbnails, fit width/page, rotate, two pages, night, bookmark, read aloud, snapshot, merge/extract/split pages, extract, test, info, report, benchmark, fill, borders, format painter, wrap, sort, filter, freeze, chart, Σ …), coloured by kind
-- Sounds for filling a series, fixing a suggestion, highlighting, opening two pages, a snapshot (a shutter), the format painter and the wrap switch; a flash on formatted cells, a camera flash on snapshots, a book-opening motion, striped progress
-- Release: GitHub repositories now get a description, the website (ipconfig.co.network/nib) and 20 topics on every release; the Razorpay plans are the new ₹20 monthly and ₹220 yearly plans (update.sh also takes them from RZP_20_MONTHLY / RZP_220_YEARLY in .env)
-- `npm run apple-sign`: when you join the Apple Developer Program, signs with your Developer ID, notarizes and staples the app and .dmg (opens with no warning); `npm run apple-sign -- --appstore` builds a sandboxed, signed .pkg for the Mac App Store (outside payment links hidden in that build); `npm run apple-check` says what is ready
+- Fixed: the crash report "ResizeObserver loop completed with undelivered notifications" (macOS). It was a harmless browser notice reported as a crash; Nib no longer reports it, and every resize watcher now waits for the next frame
+- Spreadsheets resize like Excel: drag a column or row edge (a guide line and the size in px, characters or points follow the pointer), drag across selected columns or rows to size them all, double-click an edge to fit, Column Width… / Row Height… by number, Standard Width; one ⌘Z undoes a resize. Fixed: column letters were all drawn at the left edge
+- Fonts everywhere, with no limits: any installed font (or any typed name) for text, code and the interface; sizes from 6 to 400 px in the editor (no 32 px cap), any size in documents, slides (up to 4000) and cells (up to 409 pt, Excel's maximum); weight from Thin to Black, italic, line spacing and letter spacing. The Aa button in the status bar, right-click → Font, Settings. Cell, document and slide fonts are saved in .xlsx, .docx and .pptx
+- Code wraps too: long lines wrap at the window edge with a hanging indent (no more sideways scrolling); turned on for everyone once, ⌥Z still switches it
+- Two pages side by side is the default for PDFs and books when the window is wide enough (Settings → Two pages); your choice per file is kept
+- Closing the last tab closes the window, and closing the last window quits Nib completely (the session is saved first)
+- The Dock's right-click menu (macOS): New Window, Open File…, Open Folder…, Open Recent…, new text/document/spreadsheet/presentation, Compress Files…, Extract…, Show All Windows, Merge Windows and a More submenu
+- Right-click in the Finder, File Explorer and Linux file managers: "Compress with Nib", "Extract with Nib" and "Open with Nib" (Settings → Right-Click Menu: Add Nib, or the Nib menu). Files picked together are compressed into one archive
+- Many more right-click menus, with submenus and keyboard control: the editor (Font, Transform, Encode, Insert, Lines, Find, View, File, Window), the file tree (Open With, New, Refresh), tabs bar, status bar, spreadsheet column/row headers, and documents, slides, PDFs, books, pictures and archives (their whole toolbar as a menu)
+- Small windows: nothing overlaps and the page never scrolls — toolbars that do not fit fold behind ⋯ and unfold over the page, the side bar floats over the editor, dialogs fit the window; checked from 480×320 to 1280×780
+- 26 vector animations that draw themselves, each with its sound: save, check, error, zip, unzip, AI, sparkle, window, font, book, resize, trash, copy, search, star, chart, slide, microphone and more; toasts with self-drawing icons; an animated drawing on the start screen; 29 new sound effects (115 in all)
+- More colour: eight new hues (green, teal, lime, sky, indigo, coral, mint, sun — never pink), a hue for every toolbar group, setting and spreadsheet row band, coloured choice chips
+- Spreadsheets: 148 more functions (448 in all) — statistics distributions (CHISQ, T, F, GAMMA, BETA … with their inverses and tests), complex numbers (COMPLEX, IMSUM … IMCSCH), arrays (VSTACK, HSTACK, TAKE, DROP, CHOOSECOLS, TOCOL, WRAPROWS, SORTBY, XMATCH, MMULT, MINVERSE …), money markets (XNPV, XIRR, DISC, TBILL…, VDB, coupons), REGEXTEST/EXTRACT/REPLACE and more; newer functions are saved with Excel's _xlfn. prefix so Excel reads them. Choice lists (dropdowns with coloured chips, Alt+↓) and Show Row as Card
+- The start-up byline "By Jagadeesh Kumar S" is larger and bold, with no dark plate behind it
+- README: seven demo clips (GIF + MP4) and eleven screenshots, recorded from the real app (npm run demos)
 
 See [RELEASE_NOTES.md](RELEASE_NOTES.md). Made by Jagadeesh Kumar S, creator · [YouTube](https://www.youtube.com/@JKS-sys)

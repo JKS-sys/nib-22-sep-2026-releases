@@ -1,6 +1,23 @@
 # Nib release notes
 
-## 0.4.11 — 11-oct-2026
+## 0.4.12 — 12-oct-2026
+- Fixed: the crash report "ResizeObserver loop completed with undelivered notifications" (macOS). It was a harmless browser notice reported as a crash; Nib no longer reports it, and every resize watcher now waits for the next frame
+- Spreadsheets resize like Excel: drag a column or row edge (a guide line and the size in px, characters or points follow the pointer), drag across selected columns or rows to size them all, double-click an edge to fit, Column Width… / Row Height… by number, Standard Width; one ⌘Z undoes a resize. Fixed: column letters were all drawn at the left edge
+- Fonts everywhere, with no limits: any installed font (or any typed name) for text, code and the interface; sizes from 6 to 400 px in the editor (no 32 px cap), any size in documents, slides (up to 4000) and cells (up to 409 pt, Excel's maximum); weight from Thin to Black, italic, line spacing and letter spacing. The Aa button in the status bar, right-click → Font, Settings. Cell, document and slide fonts are saved in .xlsx, .docx and .pptx
+- Code wraps too: long lines wrap at the window edge with a hanging indent (no more sideways scrolling); turned on for everyone once, ⌥Z still switches it
+- Two pages side by side is the default for PDFs and books when the window is wide enough (Settings → Two pages); your choice per file is kept
+- Closing the last tab closes the window, and closing the last window quits Nib completely (the session is saved first)
+- The Dock's right-click menu (macOS): New Window, Open File…, Open Folder…, Open Recent…, new text/document/spreadsheet/presentation, Compress Files…, Extract…, Show All Windows, Merge Windows and a More submenu
+- Right-click in the Finder, File Explorer and Linux file managers: "Compress with Nib", "Extract with Nib" and "Open with Nib" (Settings → Right-Click Menu: Add Nib, or the Nib menu). Files picked together are compressed into one archive
+- Many more right-click menus, with submenus and keyboard control: the editor (Font, Transform, Encode, Insert, Lines, Find, View, File, Window), the file tree (Open With, New, Refresh), tabs bar, status bar, spreadsheet column/row headers, and documents, slides, PDFs, books, pictures and archives (their whole toolbar as a menu)
+- Small windows: nothing overlaps and the page never scrolls — toolbars that do not fit fold behind ⋯ and unfold over the page, the side bar floats over the editor, dialogs fit the window; checked from 480×320 to 1280×780
+- 26 vector animations that draw themselves, each with its sound: save, check, error, zip, unzip, AI, sparkle, window, font, book, resize, trash, copy, search, star, chart, slide, microphone and more; toasts with self-drawing icons; an animated drawing on the start screen; 29 new sound effects (115 in all)
+- More colour: eight new hues (green, teal, lime, sky, indigo, coral, mint, sun — never pink), a hue for every toolbar group, setting and spreadsheet row band, coloured choice chips
+- Spreadsheets: 148 more functions (448 in all) — statistics distributions (CHISQ, T, F, GAMMA, BETA … with their inverses and tests), complex numbers (COMPLEX, IMSUM … IMCSCH), arrays (VSTACK, HSTACK, TAKE, DROP, CHOOSECOLS, TOCOL, WRAPROWS, SORTBY, XMATCH, MMULT, MINVERSE …), money markets (XNPV, XIRR, DISC, TBILL…, VDB, coupons), REGEXTEST/EXTRACT/REPLACE and more; newer functions are saved with Excel's _xlfn. prefix so Excel reads them. Choice lists (dropdowns with coloured chips, Alt+↓) and Show Row as Card
+- The start-up byline "By Jagadeesh Kumar S" is larger and bold, with no dark plate behind it
+- README: seven demo clips (GIF + MP4) and eleven screenshots, recorded from the real app (npm run demos)
+
+## 0.7.0 — 11-oct-2026
 - Fixed: filling down from Aug-26 gave Aug-26 again (or a plain number) instead of Sep-26. Smart fill now continues months (as dates or as text, across the year, month ends kept), days, weeks, weekdays, quarters (Q4 → Q1 2027), ISO and 1-Aug-2026 dates and times; typing Aug-26 in a workbook makes a real month, as Excel does. Formats and colours go along with the filled values
 - Fixed: colouring made in Microsoft Excel did not show, and colouring done in Nib was not saved. Nib now reads and writes cell fill and text colours (including theme colours with tints), bold, italic, underline, strikethrough, text size, alignment, wrapped text, borders and row heights — and Excel's conditional formatting (greater/less/equal/contains, colour scales, data bars) shows in Nib
 - Spreadsheet formatting bar: B I U S, bigger/smaller text, text colour, fill colour, 17 quick colours (⇧-click for text), align left/centre/right, Wrap text (the row grows to fit), borders, format painter, more/fewer decimals, clear formatting, Table colours (header and banded rows), Colour scale and Data bars; ⌘B ⌘I ⌘U on cells; column letters each in their own colour
