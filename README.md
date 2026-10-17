@@ -12,6 +12,8 @@
   <a href="https://github.com/JKS-sys/nib-22-sep-2026-releases/releases"><img alt="All releases" src="https://img.shields.io/badge/releases-all%20versions-555?style=for-the-badge"></a>
 </p>
 
+> **If Nib helps you, please ⭐ star this repository — it helps other people find it.**
+
 **An AI code text editor that opens instantly and never loses your work.** Built with Tauri and Rust — a few MB per platform — for macOS, Windows and Linux.
 
 | | |
@@ -198,3 +200,7 @@ Each clip is recorded from the real app. Click one for the full-quality video.
 - README: seven demo clips (GIF + MP4) and eleven screenshots, recorded from the real app (npm run demos)
 
 See [RELEASE_NOTES.md](RELEASE_NOTES.md). Made by Jagadeesh Kumar S, creator · [YouTube](https://www.youtube.com/@JKS-sys)
+
+---
+
+> **If Nib helps you, please ⭐ star this repository — it helps other people find it.**
