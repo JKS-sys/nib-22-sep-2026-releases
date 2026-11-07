@@ -1,6 +1,18 @@
 # Nib release notes
 
-## 0.4.12 — 12-oct-2026
+## 0.4.13 — 07-nov-2026
+- Spreadsheets: every cell has its border now — the grid lines are drawn for empty cells too, in a stronger colour, in both themes
+- Spreadsheets: AI Chat changes many cells at once — "fill D2:D40 with =B*C", "translate column B", "fix every date in C" — shown first, applied as one undo step (the new Chat button, or right-click → AI Chat)
+- Dropping or pasting a video (.mp4, .mov…), music, an installer or another file Nib can't show as text into the editor types its name; into any text box (chat, find, a cell) every file's name is typed. Dropped on the window, files open as before
+- Tools (7-Zip, zstd, unar, the office converter, Ollama) are found in Pour's folders first; Homebrew is no longer looked at, and Pour's folders are on the PATH Nib gives the programs it runs
+- Nib is now a Mac app for Apple silicon, installed with `pour install --cask nib`; the Homebrew cask is gone
+- Activity log (⇧⌘Y, or the new button in the status bar): a log box that writes down what Nib did — opened, saved, AI answers, cells the chat changed, names typed, every problem — each line in its kind's colour with its own sound and picture, live counts, Copy, Expand and Clear
+- 27 new self-drawing pictures (grid, fill, chat, drop, pour, warning, sort, filter, link, terminal, sync, lock, rocket, folder, palette, paste, cut, brackets, split, pin, zoom, clock, broom, log done/problem…) and 30 new sounds; now every one of Nib's 142 sounds has its picture
+- More colour, never pink: every status bar item, right-click menu row, palette row and inactive tab in its own hue; chat messages and each planned change coloured by kind; spreadsheet money gold, percent teal, dates sky, negatives amber, links blue; the cursor's line number lit
+- Drawn icons replace the last emoji (web search, microphone, lock, bookmark, picture, speaker, camera, timer…)
+- Records moved to dated stores: the Worker now keeps codes, licences, orders, subscriptions and crash reports in the dashboard database nib-07-nov-2026 and key-value nib-kv-07-nov-2026 (copied from D1 with a three-way catch-up; no D1 or Workers KV binding any more)
+
+## 0.8.0 — 12-oct-2026
 - Fixed: the crash report "ResizeObserver loop completed with undelivered notifications" (macOS). It was a harmless browser notice reported as a crash; Nib no longer reports it, and every resize watcher now waits for the next frame
 - Spreadsheets resize like Excel: drag a column or row edge (a guide line and the size in px, characters or points follow the pointer), drag across selected columns or rows to size them all, double-click an edge to fit, Column Width… / Row Height… by number, Standard Width; one ⌘Z undoes a resize. Fixed: column letters were all drawn at the left edge
 - Fonts everywhere, with no limits: any installed font (or any typed name) for text, code and the interface; sizes from 6 to 400 px in the editor (no 32 px cap), any size in documents, slides (up to 4000) and cells (up to 409 pt, Excel's maximum); weight from Thin to Black, italic, line spacing and letter spacing. The Aa button in the status bar, right-click → Font, Settings. Cell, document and slide fonts are saved in .xlsx, .docx and .pptx

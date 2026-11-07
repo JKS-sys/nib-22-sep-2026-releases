@@ -14,7 +14,7 @@
 
 > **If Nib helps you, please ⭐ star this repository — it helps other people find it.**
 
-**An AI code text editor that opens instantly and never loses your work.** Built with Tauri and Rust — a few MB per platform — for macOS, Windows and Linux.
+**An AI code text editor that opens instantly and never loses your work.** Built with Tauri and Rust — a few MB — a Mac app for Apple silicon.
 
 | | |
 |---|---|
@@ -24,43 +24,15 @@
 
 ## Install
 
-**One command — macOS and Linux** (curl):
+A Mac app for Apple silicon (M1 and later), installed with [Pour](https://ipconfig.co.network/pour):
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/JKS-sys/nib-22-sep-2026-releases/main/install.sh | sh
+pour install --cask nib
 ```
 
-**One command — Windows** (PowerShell):
+No Pour yet? `curl -fsSL https://ipconfig.co.network/pour/install | sh` first. Nib updates itself after that.
 
-```powershell
-irm https://raw.githubusercontent.com/JKS-sys/nib-22-sep-2026-releases/main/install.ps1 | iex
-```
-
-**macOS — Homebrew** (no tap, no extra repository — the cask file is right here):
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/JKS-sys/nib-22-sep-2026-releases/main/nib.rb -o /tmp/nib.rb && brew install --cask /tmp/nib.rb
-```
-
-Update later with `brew upgrade nib` (Nib also updates itself).
-
-**Download 0.4.12:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest)
-
-| Platform | File |
-|---|---|
-| macOS Apple Silicon | `Nib_0.4.12_aarch64.dmg` |
-| macOS Intel | `Nib_0.4.12_x64.dmg` |
-| Windows | `Nib_0.4.12_x64-setup.exe` |
-| Linux | `Nib_0.4.12_amd64.AppImage` / `.deb` |
-
-- **macOS:** open the .dmg and drag Nib to Applications. If it says Nib is damaged, run `xattr -cr /Applications/Nib.app`.
-- **Windows:** run the setup .exe.
-- **Linux.** Install the `.deb` with your package manager, or make the AppImage executable and run it:
-  ```sh
-  sudo apt install ./Nib_0.4.12_amd64.deb
-  # or
-  chmod +x Nib_0.4.12_amd64.AppImage && ./Nib_0.4.12_amd64.AppImage
-  ```
+**Download 0.4.13:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest) — `Nib_0.4.13_aarch64.dmg`: open it and drag Nib to Applications.
 
 ## See it in action
 
@@ -181,23 +153,18 @@ Each clip is recorded from the real app. Click one for the full-quality video.
 **Free:** everything above except the items marked Pro, Find in Folder, Goto Symbol, multi-cursor tools, bookmarks, text tools, minimap, auto save and distraction-free mode.
 **Pro (₹20/month or ₹220/year):** AI, plus all of those.
 
-## What's new in 0.4.12
+## What's new in 0.4.13
 
-- Fixed: the crash report "ResizeObserver loop completed with undelivered notifications" (macOS). It was a harmless browser notice reported as a crash; Nib no longer reports it, and every resize watcher now waits for the next frame
-- Spreadsheets resize like Excel: drag a column or row edge (a guide line and the size in px, characters or points follow the pointer), drag across selected columns or rows to size them all, double-click an edge to fit, Column Width… / Row Height… by number, Standard Width; one ⌘Z undoes a resize. Fixed: column letters were all drawn at the left edge
-- Fonts everywhere, with no limits: any installed font (or any typed name) for text, code and the interface; sizes from 6 to 400 px in the editor (no 32 px cap), any size in documents, slides (up to 4000) and cells (up to 409 pt, Excel's maximum); weight from Thin to Black, italic, line spacing and letter spacing. The Aa button in the status bar, right-click → Font, Settings. Cell, document and slide fonts are saved in .xlsx, .docx and .pptx
-- Code wraps too: long lines wrap at the window edge with a hanging indent (no more sideways scrolling); turned on for everyone once, ⌥Z still switches it
-- Two pages side by side is the default for PDFs and books when the window is wide enough (Settings → Two pages); your choice per file is kept
-- Closing the last tab closes the window, and closing the last window quits Nib completely (the session is saved first)
-- The Dock's right-click menu (macOS): New Window, Open File…, Open Folder…, Open Recent…, new text/document/spreadsheet/presentation, Compress Files…, Extract…, Show All Windows, Merge Windows and a More submenu
-- Right-click in the Finder, File Explorer and Linux file managers: "Compress with Nib", "Extract with Nib" and "Open with Nib" (Settings → Right-Click Menu: Add Nib, or the Nib menu). Files picked together are compressed into one archive
-- Many more right-click menus, with submenus and keyboard control: the editor (Font, Transform, Encode, Insert, Lines, Find, View, File, Window), the file tree (Open With, New, Refresh), tabs bar, status bar, spreadsheet column/row headers, and documents, slides, PDFs, books, pictures and archives (their whole toolbar as a menu)
-- Small windows: nothing overlaps and the page never scrolls — toolbars that do not fit fold behind ⋯ and unfold over the page, the side bar floats over the editor, dialogs fit the window; checked from 480×320 to 1280×780
-- 26 vector animations that draw themselves, each with its sound: save, check, error, zip, unzip, AI, sparkle, window, font, book, resize, trash, copy, search, star, chart, slide, microphone and more; toasts with self-drawing icons; an animated drawing on the start screen; 29 new sound effects (115 in all)
-- More colour: eight new hues (green, teal, lime, sky, indigo, coral, mint, sun — never pink), a hue for every toolbar group, setting and spreadsheet row band, coloured choice chips
-- Spreadsheets: 148 more functions (448 in all) — statistics distributions (CHISQ, T, F, GAMMA, BETA … with their inverses and tests), complex numbers (COMPLEX, IMSUM … IMCSCH), arrays (VSTACK, HSTACK, TAKE, DROP, CHOOSECOLS, TOCOL, WRAPROWS, SORTBY, XMATCH, MMULT, MINVERSE …), money markets (XNPV, XIRR, DISC, TBILL…, VDB, coupons), REGEXTEST/EXTRACT/REPLACE and more; newer functions are saved with Excel's _xlfn. prefix so Excel reads them. Choice lists (dropdowns with coloured chips, Alt+↓) and Show Row as Card
-- The start-up byline "By Jagadeesh Kumar S" is larger and bold, with no dark plate behind it
-- README: seven demo clips (GIF + MP4) and eleven screenshots, recorded from the real app (npm run demos)
+- Spreadsheets: every cell has its border now — the grid lines are drawn for empty cells too, in a stronger colour, in both themes
+- Spreadsheets: AI Chat changes many cells at once — "fill D2:D40 with =B*C", "translate column B", "fix every date in C" — shown first, applied as one undo step (the new Chat button, or right-click → AI Chat)
+- Dropping or pasting a video (.mp4, .mov…), music, an installer or another file Nib can't show as text into the editor types its name; into any text box (chat, find, a cell) every file's name is typed. Dropped on the window, files open as before
+- Tools (7-Zip, zstd, unar, the office converter, Ollama) are found in Pour's folders first; Homebrew is no longer looked at, and Pour's folders are on the PATH Nib gives the programs it runs
+- Nib is now a Mac app for Apple silicon, installed with `pour install --cask nib`; the Homebrew cask is gone
+- Activity log (⇧⌘Y, or the new button in the status bar): a log box that writes down what Nib did — opened, saved, AI answers, cells the chat changed, names typed, every problem — each line in its kind's colour with its own sound and picture, live counts, Copy, Expand and Clear
+- 27 new self-drawing pictures (grid, fill, chat, drop, pour, warning, sort, filter, link, terminal, sync, lock, rocket, folder, palette, paste, cut, brackets, split, pin, zoom, clock, broom, log done/problem…) and 30 new sounds; now every one of Nib's 142 sounds has its picture
+- More colour, never pink: every status bar item, right-click menu row, palette row and inactive tab in its own hue; chat messages and each planned change coloured by kind; spreadsheet money gold, percent teal, dates sky, negatives amber, links blue; the cursor's line number lit
+- Drawn icons replace the last emoji (web search, microphone, lock, bookmark, picture, speaker, camera, timer…)
+- Records moved to dated stores: the Worker now keeps codes, licences, orders, subscriptions and crash reports in the dashboard database nib-07-nov-2026 and key-value nib-kv-07-nov-2026 (copied from D1 with a three-way catch-up; no D1 or Workers KV binding any more)
 
 See [RELEASE_NOTES.md](RELEASE_NOTES.md). Made by Jagadeesh Kumar S, creator · [YouTube](https://www.youtube.com/@JKS-sys)
 
