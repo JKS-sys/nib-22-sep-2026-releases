@@ -32,7 +32,7 @@ pour install --cask nib
 
 No Pour yet? `curl -fsSL https://ipconfig.co.network/pour/install | sh` first. Nib updates itself after that.
 
-**Download 0.4.13:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest) — `Nib_0.4.13_aarch64.dmg`: open it and drag Nib to Applications.
+**Download 0.4.15:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest) — `Nib_0.4.15_aarch64.dmg`: open it and drag Nib to Applications.
 
 ## See it in action
 
@@ -153,7 +153,7 @@ Each clip is recorded from the real app. Click one for the full-quality video.
 **Free:** everything above except the items marked Pro, Find in Folder, Goto Symbol, multi-cursor tools, bookmarks, text tools, minimap, auto save and distraction-free mode.
 **Pro (₹20/month or ₹220/year):** AI, plus all of those.
 
-## What's new in 0.4.13
+## What's new in 0.4.15
 
 - Spreadsheets: every cell has its border now — the grid lines are drawn for empty cells too, in a stronger colour, in both themes
 - Spreadsheets: AI Chat changes many cells at once — "fill D2:D40 with =B*C", "translate column B", "fix every date in C" — shown first, applied as one undo step (the new Chat button, or right-click → AI Chat)
@@ -164,6 +164,9 @@ Each clip is recorded from the real app. Click one for the full-quality video.
 - 27 new self-drawing pictures (grid, fill, chat, drop, pour, warning, sort, filter, link, terminal, sync, lock, rocket, folder, palette, paste, cut, brackets, split, pin, zoom, clock, broom, log done/problem…) and 30 new sounds; now every one of Nib's 142 sounds has its picture
 - More colour, never pink: every status bar item, right-click menu row, palette row and inactive tab in its own hue; chat messages and each planned change coloured by kind; spreadsheet money gold, percent teal, dates sky, negatives amber, links blue; the cursor's line number lit
 - Drawn icons replace the last emoji (web search, microphone, lock, bookmark, picture, speaker, camera, timer…)
+- Signed with the Apple Developer ID and notarised by Apple: no more "unidentified developer" warning. Because the signature changes once, macOS may ask one more time for the folders Nib may open
+- Owner Panel: it now opens on the Mac Studio only (the owner list held the test Mac by mistake). The app keeps a hash of the owner's serial, never the serial itself, and the Worker checks the same hash
+- Errors are collected: page errors, failed actions, error notices and last run's crashes go anonymously to the owner's dashboard and the Owner Panel (versions, system, message, where; home folders, file paths and e-mail addresses are blanked; repeats counted; up to 50 a session; offline ones kept). Turn it off with the command "Send Error Reports (On/Off)"
 - Records moved to dated stores: the Worker now keeps codes, licences, orders, subscriptions and crash reports in the dashboard database nib-07-nov-2026 and key-value nib-kv-07-nov-2026 (copied from D1 with a three-way catch-up; no D1 or Workers KV binding any more)
 
 See [RELEASE_NOTES.md](RELEASE_NOTES.md). Made by Jagadeesh Kumar S, creator · [YouTube](https://www.youtube.com/@JKS-sys)

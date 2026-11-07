@@ -1,6 +1,6 @@
 # Nib release notes
 
-## 0.4.13 — 07-nov-2026
+## 0.4.15 — 07-nov-2026
 - Spreadsheets: every cell has its border now — the grid lines are drawn for empty cells too, in a stronger colour, in both themes
 - Spreadsheets: AI Chat changes many cells at once — "fill D2:D40 with =B*C", "translate column B", "fix every date in C" — shown first, applied as one undo step (the new Chat button, or right-click → AI Chat)
 - Dropping or pasting a video (.mp4, .mov…), music, an installer or another file Nib can't show as text into the editor types its name; into any text box (chat, find, a cell) every file's name is typed. Dropped on the window, files open as before
@@ -10,6 +10,9 @@
 - 27 new self-drawing pictures (grid, fill, chat, drop, pour, warning, sort, filter, link, terminal, sync, lock, rocket, folder, palette, paste, cut, brackets, split, pin, zoom, clock, broom, log done/problem…) and 30 new sounds; now every one of Nib's 142 sounds has its picture
 - More colour, never pink: every status bar item, right-click menu row, palette row and inactive tab in its own hue; chat messages and each planned change coloured by kind; spreadsheet money gold, percent teal, dates sky, negatives amber, links blue; the cursor's line number lit
 - Drawn icons replace the last emoji (web search, microphone, lock, bookmark, picture, speaker, camera, timer…)
+- Signed with the Apple Developer ID and notarised by Apple: no more "unidentified developer" warning. Because the signature changes once, macOS may ask one more time for the folders Nib may open
+- Owner Panel: it now opens on the Mac Studio only (the owner list held the test Mac by mistake). The app keeps a hash of the owner's serial, never the serial itself, and the Worker checks the same hash
+- Errors are collected: page errors, failed actions, error notices and last run's crashes go anonymously to the owner's dashboard and the Owner Panel (versions, system, message, where; home folders, file paths and e-mail addresses are blanked; repeats counted; up to 50 a session; offline ones kept). Turn it off with the command "Send Error Reports (On/Off)"
 - Records moved to dated stores: the Worker now keeps codes, licences, orders, subscriptions and crash reports in the dashboard database nib-07-nov-2026 and key-value nib-kv-07-nov-2026 (copied from D1 with a three-way catch-up; no D1 or Workers KV binding any more)
 
 ## 0.8.0 — 12-oct-2026
