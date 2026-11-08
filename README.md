@@ -32,7 +32,7 @@ pour install --cask nib
 
 No Pour yet? `curl -fsSL https://ipconfig.co.network/pour/install | sh` first. Nib updates itself after that.
 
-**Download 0.4.15:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest) — `Nib_0.4.15_aarch64.dmg`: open it and drag Nib to Applications.
+**Download 0.4.16:** [latest release](https://github.com/JKS-sys/nib-22-sep-2026-releases/releases/latest) — `Nib_0.4.16_aarch64.dmg`: open it and drag Nib to Applications.
 
 ## See it in action
 
@@ -153,8 +153,12 @@ Each clip is recorded from the real app. Click one for the full-quality video.
 **Free:** everything above except the items marked Pro, Find in Folder, Goto Symbol, multi-cursor tools, bookmarks, text tools, minimap, auto save and distraction-free mode.
 **Pro (₹20/month or ₹220/year):** AI, plus all of those.
 
-## What's new in 0.4.15
+## What's new in 0.4.16
 
+- Spreadsheets: find a sheet by name — the new list button at the bottom left (or ⌥⌘K) shows every sheet; type any words of its name (accents ignored), ↑↓ and Return to open it
+- Spreadsheets: the name box takes sheets too — type a sheet's name, or Sales!B4 / 'Q1 2026'!A1:D9 to jump straight to a cell on another sheet
+- Spreadsheets: ⌥⌘→ / ⌥⌘← (or ⌃PageDown / ⌃PageUp) go to the next or previous sheet; right-click a sheet tab to Move Left / Move Right; each tab has its own colour
+- Saving an .xlsx no longer warns that colours will be lost: fonts, colours, fills, borders, alignment and row heights are kept (the question now appears only when saving as .xls, .ods or another older format)
 - Spreadsheets: every cell has its border now — the grid lines are drawn for empty cells too, in a stronger colour, in both themes
 - Spreadsheets: AI Chat changes many cells at once — "fill D2:D40 with =B*C", "translate column B", "fix every date in C" — shown first, applied as one undo step (the new Chat button, or right-click → AI Chat)
 - Dropping or pasting a video (.mp4, .mov…), music, an installer or another file Nib can't show as text into the editor types its name; into any text box (chat, find, a cell) every file's name is typed. Dropped on the window, files open as before
